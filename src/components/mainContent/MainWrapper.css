@@ -1,0 +1,26 @@
+#setting_2 {
+  display: none;
+}
+#hide_for_lg{
+    display: none;
+}
+@media only screen and (max-width: 1639px) and (min-width: 1280px) {
+  #setting_1 {
+    display: none;
+  }
+  #setting_2 {
+    display: block;
+    position: absolute;
+    right: -120%;
+    transition: right 0.3s, position 0.3s;
+  }
+  #setting_3 {
+    display: block;
+    position: absolute;
+    right: 0;
+    transition: right 0.3s, position 0.3s;
+  }
+  #hide_for_lg{
+    display: block;
+  }
+}

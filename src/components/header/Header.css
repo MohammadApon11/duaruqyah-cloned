@@ -1,0 +1,14 @@
+.setting_icon{
+    display: none;
+}
+
+
+@media only screen and (max-width: 1639px) and (min-width: 1280px){
+    .setting_icon{
+        display: block;
+    }
+    .setting{
+        position: absolute;
+        right: 120%;
+    }
+}

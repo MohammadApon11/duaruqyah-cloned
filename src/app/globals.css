@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* style for scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  /* display: none; */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a4a4a4;
+  border-radius: 5px;
+  border: 5px solid transparent;
+  /* background: #1FA45B; */
+}
+
+/* copy icon */
+#copy_show {
+  display: none;
+}
+#copy:hover #copy_show {
+  display: block;
+}
+
+#bookmark_show{
+  display: none;
+}
+#bookmark:hover #bookmark_show{
+  display: block;
+}
+#plan_show{
+  display: none;
+}
+#plan:hover #plan_show{
+  display: block;
+}
+#share_show{
+  display: none;
+}
+#share:hover #share_show{
+  display: block;
+}
+#report_show{
+  display: none;
+}
+#report:hover #report_show{
+  display: block;
+}

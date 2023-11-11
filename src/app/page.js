@@ -1,6 +1,6 @@
 "use client";
 import Settings from "@/components/Settings/Settings";
-import MainWrapper from "@/components/mainContent/mainWrapper";
+import MainWrapper from "@/components/mainContent/MainWrapper";
 import SideNave from "@/components/sideNav/SideNave";
 import { useState } from "react";
 

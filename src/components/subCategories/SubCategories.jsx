@@ -1,13 +1,23 @@
 "use client";
-import getduas from "@/hooks/getDuas";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DuaName from "../duas/DuaName";
 import { useCatId } from "@/provider/CatIdProvider";
+import getduas from "@/hooks/getDuas";
 
-const SubCategories = ({ subCategories, cat_id }) => {
-  const { subcat_name_en, subcat_id } = subCategories;
+const SubCategories = ({ subCategory, cat_id }) => {
+  const { subcat_name_en, subcat_id } = subCategory;
   const { subCatId, setSubCatId } = useCatId();
-  const duas = getduas();
+  // Initialize state to hold the fetched duas using the 'useState' hook
+  const [duas, setduas] = useState([]);
+
+  // Make a GET request to the "/api/duas" endpoint
+  useEffect(() => {
+    // Call getduas and handle the resolved promise
+    getduas().then((data) => {
+      // Do something with the fetched duas
+      setduas(data);
+    });
+  }, []);
   const filterDuas = duas.filter((dua) => subcat_id === dua.subcat_id);
   const isOpen = subCatId === subcat_id;
 
@@ -30,7 +40,7 @@ const SubCategories = ({ subCategories, cat_id }) => {
                 {subcat_name_en}
               </span>
             </a>
-            
+
             <div className={`${isOpen ? "block" : "hidden"}`}>
               {filterDuas.map((dua, index) => (
                 <DuaName

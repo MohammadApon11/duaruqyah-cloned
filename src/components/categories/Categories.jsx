@@ -1,23 +1,18 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import SingleCategoris from "./SingleCategoris";
+import getCategories from "@/hooks/getCategories";
 
 const Categories = () => {
   // State variables for categories and filter text
   const [categories, setCategories] = useState([]);
   const [filterText, setFilterText] = useState("");
 
-  // useEffect hook to fetch categories from the server when the component mounts
   useEffect(() => {
-    fetch("/api/categories", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }).then((res) => {
-      res.json().then((data) => {
-        setCategories(data);
-      });
+    // Call getCategories and handle the resolved promise
+    getCategories().then((categories) => {
+      // Do something with the fetched categories
+      setCategories(categories);
     });
   }, []);
 

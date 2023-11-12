@@ -101,13 +101,13 @@ const SingleDua = ({ dua, index }) => {
             className="relative w-6"
           >
             <img className="cursor-pointer" src="/dua/copy.png" alt="copy" />
-            <div id="copy_show" class="absolute -top-10 -right-3">
-              <div class="relative">
-                <p class="bg-black  text-sm px-2 py-1 rounded-md text-white">
+            <div id="copy_show" className="absolute -top-10 -right-3">
+              <div className="relative">
+                <p className="bg-black  text-sm px-2 py-1 rounded-md text-white">
                   Copy
                 </p>
                 <img
-                  class="absolute -bottom-2 left-5"
+                  className="absolute -bottom-2 left-5"
                   src="/green-corner.svg"
                   alt="green-corner"
                 />
@@ -126,13 +126,13 @@ const SingleDua = ({ dua, index }) => {
               src="/dua/bookmarks.png"
               alt="bookmark"
             />
-            <div id="bookmark_show" class="absolute -top-10 -right-3">
-              <div class="relative">
-                <p class="bg-black  text-sm px-2 py-1 rounded-md text-white">
+            <div id="bookmark_show" className="absolute -top-10 -right-3">
+              <div className="relative">
+                <p className="bg-black  text-sm px-2 py-1 rounded-md text-white">
                   Bookmark
                 </p>
                 <img
-                  class="absolute -bottom-2 left-5"
+                  className="absolute -bottom-2 left-5"
                   src="/green-corner.svg"
                   alt="green-corner"
                 />
@@ -151,13 +151,13 @@ const SingleDua = ({ dua, index }) => {
               src="/dua/plan.png"
               alt="plan"
             />
-            <div id="plan_show" class="absolute -top-10 -right-3">
-              <div class="relative">
-                <p class="bg-black  text-sm px-2 py-1 rounded-md text-white">
+            <div id="plan_show" className="absolute -top-10 -right-3">
+              <div className="relative">
+                <p className="bg-black  text-sm px-2 py-1 rounded-md text-white">
                   Memorize
                 </p>
                 <img
-                  class="absolute -bottom-2 left-5"
+                  className="absolute -bottom-2 left-5"
                   src="/green-corner.svg"
                   alt="green-corner"
                 />
@@ -176,13 +176,13 @@ const SingleDua = ({ dua, index }) => {
               src="/dua/share.png"
               alt="share"
             />
-            <div id="share_show" class="absolute -top-10 -right-3">
-              <div class="relative">
-                <p class="bg-black  text-sm px-2 py-1 rounded-md text-white">
+            <div id="share_show" className="absolute -top-10 -right-3">
+              <div className="relative">
+                <p className="bg-black  text-sm px-2 py-1 rounded-md text-white">
                   Share
                 </p>
                 <img
-                  class="absolute -bottom-2 left-5"
+                  className="absolute -bottom-2 left-5"
                   src="/green-corner.svg"
                   alt="green-corner"
                 />
@@ -201,13 +201,13 @@ const SingleDua = ({ dua, index }) => {
               src="/dua/report.svg"
               alt="report"
             />
-            <div id="report_show" class="absolute -top-10 -right-3">
-              <div class="relative">
-                <p class="bg-black  text-sm px-2 py-1 rounded-md text-white">
+            <div id="report_show" className="absolute -top-10 -right-3">
+              <div className="relative">
+                <p className="bg-black  text-sm px-2 py-1 rounded-md text-white">
                   Report
                 </p>
                 <img
-                  class="absolute -bottom-2 left-5"
+                  className="absolute -bottom-2 left-5"
                   src="/green-corner.svg"
                   alt="green-corner"
                 />

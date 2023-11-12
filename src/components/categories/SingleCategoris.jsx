@@ -1,12 +1,24 @@
-// "use client";
-import React from "react";
-import getSubCategories from "@/hooks/getSubCategories";
+"use client";
+import React, { useEffect, useState } from "react";
 import SubCategories from "../subCategories/SubCategories";
 import { useCatId } from "@/provider/CatIdProvider";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import getSubCategories from "@/hooks/getSubCategories";
 
 const SingleCategoris = ({ category }) => {
+  // State variables for categories and filter text
+  const [subCategories, setSubCategories] = useState([]);
+
+  // useEffect call for each subCategory
+  useEffect(() => {
+    // Call getSubCategories and handle the resolved promise
+    getSubCategories().then((subCategories) => {
+      // Do something with the fetched subcategories
+      setSubCategories(subCategories);
+    });
+  }, []);
+
   // Destructure values from the 'category' object
 const { cat_name_en, no_of_subcat, no_of_dua, cat_id } = category;
 
@@ -20,12 +32,6 @@ const isOpen = cat_id === catId;
 const handleOpen = () => {
   setCatId(cat_id);
 };
-
-// Call the 'getSubCategories' function to retrieve subcategories
-const subCategories = getSubCategories();
-
-// Log subcategories to the console for debugging or informational purposes
-console.log("from sub categories", subCategories);
 
 // Filter subcategories based on the current category id ('cat_id')
 const filteredSubCategories = subCategories.filter((c) => c.cat_id === cat_id);
@@ -66,10 +72,10 @@ const filteredSubCategories = subCategories.filter((c) => c.cat_id === cat_id);
       </a>
 
       <div className={`${isOpen ? "block" : "hidden"}`}>
-        {filteredSubCategories.map((subCategories, index) => (
+        {filteredSubCategories.map((subCategory, index) => (
           <SubCategories
             key={index}
-            subCategories={subCategories}
+            subCategory={subCategory}
             cat_id={cat_id}
           />
         ))}
